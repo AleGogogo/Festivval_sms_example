@@ -1,0 +1,2 @@
+# Festivval_sms_example
+一个关于发送祝福短信的App(用到Tablelayout和floatingactionbutton，还有contentprovider和loader机制）
