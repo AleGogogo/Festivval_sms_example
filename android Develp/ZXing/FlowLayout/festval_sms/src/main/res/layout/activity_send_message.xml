@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/activity_send_message"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.lyw.festval_sms.activity.SendMessageActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+    <EditText
+        android:id="@+id/id_send_edt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="left|top"
+        android:background="@drawable/sms_item"
+        android:textColor="#777"
+        android:textSize="18sp"/>
+    <Button
+        android:id="@+id/id_send_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="添加联系人"
+        android:textColor="#696969"
+        android:textSize="25dp"/>
+   <com.example.lyw.festval_sms.view.FlowLayout
+         android:id="@+id/id_send_flowlayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/id_floatingactionbar"
+        android:src="@drawable/icon_to_send"
+        app:backgroundTint="@color/main_color"
+        app:borderWidth="0dp"
+        android:layout_marginBottom="@dimen/fab_margin"
+        />
+    <!--clickable 因为framelayout属于控件，它会把点击事件消耗-->
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_layout_loading_framelayout"
+        android:clickable="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="正在发送中。。。。"/>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
